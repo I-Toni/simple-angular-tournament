@@ -16,6 +16,6 @@ export class RosterService {
     if (player === null || player === '' || this.contestants.indexOf(player) >= 0 ) {
       throw new Error('Invalid, Player must be defined and not duplicate');
     }
-
+    this.contestants.push(player);
   }
 }
