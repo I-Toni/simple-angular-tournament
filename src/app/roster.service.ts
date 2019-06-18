@@ -16,8 +16,14 @@ export class RosterService {
   }
   
   addContestant(player: string) {
-    if (player === null || player === '' || this.contestants.indexOf(player) >= 0 ) {
-      throw new Error('Invalid, Player must be defined and not duplicate');
+    if (player === null ) {
+      throw new Error('Player can not be null');
+    };
+    if (player === '') {
+      throw new Error('Player must not be empty');
+    };
+    if (this.contestants.indexOf(player) >= 0 ) {
+      throw new Error('Player must not be duplicate');
     };
     this.contestants.push(player);
   }

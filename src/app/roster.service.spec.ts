@@ -13,7 +13,7 @@ describe('RosterService', () => {
   it('should not allow duplicate names', () => {
     const rosterService = new RosterService();
     rosterService.addContestant("John");
-    rosterService.addContestant("John")
-    expect(rosterService.getContestants).toThrow();
+    
+    expect(function() {rosterService.addContestant("John");}).toThrow(new Error('Invalid, Player must be defined and not duplicate'));
   });
 });
