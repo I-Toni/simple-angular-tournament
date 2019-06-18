@@ -12,7 +12,10 @@ export class RosterService {
     return this.contestants;
   }
   
+  addContestants(player: string) {
+    if (player === null || player === '' || this.contestants.indexOf(player) >= 0 ) {
+      throw new Error('Invalid, Player must be defined and not duplicate');
+    }
 
-    
   }
 }
