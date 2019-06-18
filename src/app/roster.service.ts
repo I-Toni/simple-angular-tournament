@@ -4,10 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class RosterService {
-  contestants: Array<string>;
+  contestants = [];
   
   constructor() { }
   
+  ngOnInit() {
+  }
+
   getContestants() {
     return this.contestants;
   }
