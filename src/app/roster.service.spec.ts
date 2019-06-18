@@ -13,6 +13,7 @@ describe('RosterService', () => {
   it('should not allow duplicate names', () => {
     const rosterService = new RosterService();
     rosterService.addContestant("John");
-    expect(rosterService.addContestant("John")).toThrow();
+    rosterService.addContestant("John")
+    expect(rosterService.getContestants).toThrow();
   });
 });
