@@ -20,4 +20,9 @@ describe('RosterService', () => {
     const rosterService = new RosterService();
     expect(function() {rosterService.addContestant(null);}).toThrow(new Error('Player can not be null'));
   });
+  
+  it('should not allow empty string names', () => {
+    const rosterService = new RosterService();
+    expect(function() {rosterService.addContestant('');}).toThrow(new Error('Player must not be empty'));
+  });
 });
