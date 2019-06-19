@@ -8,14 +8,14 @@ import { RosterService } from '../roster.service';
 })
 export class RegistrationComponent implements OnInit {
   public players: string[];
-  public informationMessages: string;
+  public messages: string;
 
   
   constructor(private rosterService: RosterService) { }
 
   ngOnInit() {
     this.players = ['','','','','','','',''];
-    this.informationMessages = '';
+    this.messages = '';
   }
   
   registerContestants() {
@@ -31,9 +31,11 @@ export class RegistrationComponent implements OnInit {
         for (var index = 0; index < roster.length; index++) {
           this.rosterService.addContestant(roster[index]);
         }
+      } else {
+        messages = 'Contestants should be 2, 4, or 8';
       }
     } catch (err){
-      console.log("Error in register contestants: ", err);
+      messages = "Error in register contestants: " + err;
     }
   }
 
