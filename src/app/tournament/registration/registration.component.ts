@@ -18,5 +18,23 @@ export class RegistrationComponent implements OnInit {
     this.informationMessages = '';
   }
   
- 
+  registerContestants() {
+    var roster = [];
+    try {
+      for (var index = 0; index < players.length; index++) {
+        if (players[index] != '' || players[index] != null || players[index] != undefined) {
+          roster[index] = players[index];
+        } 
+      }
+      
+      if (roster.length === 2 || roster.length === 4 || roster.length === 8) {
+        for (var index = 0; index < players.length; index++) {
+          this.rosterService.addContestant(players[index]);
+        }
+      }
+    } catch (err){
+      console.log("Error in register contestants: ", err);
+    }
+  }
+
 }
