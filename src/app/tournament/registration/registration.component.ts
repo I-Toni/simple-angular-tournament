@@ -28,8 +28,8 @@ export class RegistrationComponent implements OnInit {
       }
       
       if (roster.length === 2 || roster.length === 4 || roster.length === 8) {
-        for (var index = 0; index < players.length; index++) {
-          this.rosterService.addContestant(players[index]);
+        for (var index = 0; index < roster.length; index++) {
+          this.rosterService.addContestant(roster[index]);
         }
       }
     } catch (err){
