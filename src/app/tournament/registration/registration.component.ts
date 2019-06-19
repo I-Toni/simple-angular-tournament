@@ -31,11 +31,12 @@ export class RegistrationComponent implements OnInit {
         for (var index = 0; index < roster.length; index++) {
           this.rosterService.addContestant(roster[index]);
         }
+        this.messages = roster;
       } else {
-        messages = 'Contestants should be 2, 4, or 8';
+        this.messages = 'Contestants should be 2, 4, or 8';
       }
     } catch (err){
-      messages = "Error in register contestants: " + err;
+      this.messages = "Error in register contestants: " + err;
     }
   }
 
