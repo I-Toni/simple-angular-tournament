@@ -1,3 +1,19 @@
-<p>
-  registration works!
-</p>
+<div>
+  {{ messages }}
+</div>
+<div class="contestants-container">
+  <form (ngSubmit)="registerContestants()">
+    <div class="contestant" *ngFor ="let contestant of rosterService; index as i; trackBy:trackByFn">
+      <input type="text" name="contestantName" [(ngModel)]="players[i]" placeholder="Contestant {{i}}" /> <br/>
+    </div>
+    <div>
+      <button type="submit" >Register Contestants</button>
+    <div>
+  </form>
+</div>
+
+<div>
+  <button>Autofill 2 Players</button>
+  <button>Autofill 4 Players</button>
+  <button>Autofill 8 Players</button>
+<div>       
