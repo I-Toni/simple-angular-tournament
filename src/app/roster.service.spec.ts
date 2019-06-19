@@ -25,4 +25,10 @@ describe('RosterService', () => {
     const rosterService = new RosterService();
     expect(function() {rosterService.addContestant('');}).toThrow(new Error('Player must not be empty'));
   });
+  
+  it('should add one contestant', () => {
+    const rosterService = new RosterService();
+    rosterService.addContestant('Kevin');
+    expect(rosterService.getContestants()).toEqual(['Kevin']);
+  });
 });
