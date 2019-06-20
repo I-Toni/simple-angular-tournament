@@ -20,6 +20,10 @@ export class BracketsComponent implements OnInit {
     this.roundWinners = [];
     this.winner = '';
   }
+  
+  trackByFn(index: any, item: any) {
+    return index;
+  }
 
   completeRound() {
     this.roundNumber += 1;
