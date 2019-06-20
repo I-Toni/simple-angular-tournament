@@ -2,8 +2,8 @@
 <div class="bracket" >
   <form (ngSubmit)="completeRound()">
     <div *ngFor="let player of players; index as i; trackBy:trackByFn">
-      <input type="radio" name="playerName" [(ngModel)]= "player[i]" value="player[i]">
-      <input type="radio" name="playerName" [(ngModel)]= "player[i+1]" value="player[i]">
+      <input type="radio" name="playerName" [(ngModel)]= "player" value="player">player
+      <input type="radio" name="playerName" [(ngModel)]= "player" value="player">player
     </div>
     <button type="submit">Complete Round</button>
   </form>
