@@ -1,9 +1,9 @@
 <h1>Round: {{roundNumber}}</h1>
-<div class="bracket" *ngFor="let player of players; index as i; trackBy:trackByFn">
+<div class="bracket" >
   <form (ngSubmit)="completeRound()">
-    <div>
-      <input type="radio" name="playerName" [(ngModel)]= "player[i]" value="player[i]">player[i]
-      <input type="radio" name="playerName" [(ngModel)]= "player[i+1]" value="player[i]">player[i+1]
+    <div *ngFor="let player of players; index as i; trackBy:trackByFn">
+      <input type="radio" name="playerName" [(ngModel)]= "player[i]" value="player[i]">
+      <input type="radio" name="playerName" [(ngModel)]= "player[i+1]" value="player[i]">
     </div>
     <button type="submit">Complete Round</button>
   </form>

@@ -3,10 +3,10 @@ export class Match {
   player1: string;
   player2: string;
 
-  constructor(public contestant1: string, public contestant2: string, public winner: string) {
+  constructor(public contestant1: string, public contestant2: string, public theWinner: string) {
     this.player1 = contestant1;
     this.player2 = contestant2;
-    this.winner = winner;          
+    this.winner = theWinner;          
   }
 
   getWinner(): string {
