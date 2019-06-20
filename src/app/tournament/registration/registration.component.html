@@ -3,7 +3,7 @@
 </div>
 <div class="contestants-container">
   <form (ngSubmit)="registerContestants()">
-    <div class="contestant" *ngFor="let contestant of rosterService.getContestants(); index as i; trackBy:trackByFn">
+    <div class="contestant" *ngFor="let player of players; index as i; trackBy:trackByFn">
       <input type="text" name="contestantName" [(ngModel)]="players[i]" placeholder="Contestant {{i}}"> <br/>
     </div>
     <div>
