@@ -29,7 +29,7 @@ export class BracketsComponent implements OnInit {
       }
       this.players = this.roundWinners;
     } else {
-      this.winner = this.roundWinners[0];
+      this.winner = 'Winner is ' + this.roundWinners[0];
     }
   }
 }
