@@ -37,9 +37,9 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
   });
   
-  it('should not register an invalid number of players', () => {
-    component.players = ['john', 'kevin', 'ross'];
+  it('should not register an duplicate players', () => {
+    component.players = ['john', 'john', 'john', 'john'];
     component.registerContestants();
-    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+    expect(component.messages).toEqual('Error in register contestants: Error: Player must not be duplicate');
   });
 });
