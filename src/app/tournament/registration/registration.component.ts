@@ -8,7 +8,7 @@ import { RosterService } from '../../roster.service';
 })
 export class RegistrationComponent implements OnInit {
   public players: string[];
-  public messages: string;
+  public messages: any;
 
   
   constructor(private rosterService: RosterService) { }
@@ -19,11 +19,11 @@ export class RegistrationComponent implements OnInit {
   }
   
   registerContestants() {
-    var roster = [];
+    let roster = [];
     try {
-      for (var index = 0; index < players.length; index++) {
-        if (players[index] != '' || players[index] != null || players[index] != undefined) {
-          roster[index] = players[index];
+      for (var index = 0; index < this.players.length; index++) {
+        if (this.players[index] != '' || this.players[index] != null || this.players[index] != undefined) {
+          roster.push(this.players[index]);
         } 
       }
       
