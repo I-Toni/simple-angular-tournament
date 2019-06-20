@@ -31,4 +31,15 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.players.length).toEqual(8);
   });
   
+  it('should not register an invalid number of players', () => {
+    component.players = ['john', 'kevin', 'ross'];
+    component.registerContestants();
+    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+  });
+  
+  it('should not register an invalid number of players', () => {
+    component.players = ['john', 'kevin', 'ross'];
+    component.registerContestants();
+    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+  });
 });
