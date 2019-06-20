@@ -23,8 +23,12 @@ describe('RegistrationComponent with Real Service', () => {
     fixture.detectChanges();
   });
   
-  it('should create', () => {
+  it('should create registraion component', () => {
     expect(component).toBeTruthy();
+  });
+  
+  it('should have size of players set to 8', () => {
+    expect(component.players.length).toEqual(8);
   });
   
 });
