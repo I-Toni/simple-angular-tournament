@@ -8,7 +8,8 @@ describe('RegistrationComponent with Real Service', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegistrationComponent ]
+      declarations: [ RegistrationComponent ],
+      providers: [ RosterService ]
     })
     .compileComponents();
   }));
