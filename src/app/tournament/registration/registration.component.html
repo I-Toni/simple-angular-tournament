@@ -3,8 +3,8 @@
 </div>
 <div class="contestants-container">
   <form (ngSubmit)="registerContestants()">
-    <div class="contestant" *ngFor ="let contestant of rosterService; index as i; trackBy:trackByFn">
-      <input type="text" name="contestantName" [(ngModel)]="players[i]" placeholder="Contestant {{i}}"/> <br/>
+    <div class="contestant" *ngFor="let contestant of rosterService.getContestants(); index as i; trackBy:trackByFn">
+      <input type="text" name="contestantName" [(ngModel)]="players[i]" placeholder="Contestant {{i}}"> <br/>
     </div>
     <div>
       <button type="submit" >Register Contestants</button>
