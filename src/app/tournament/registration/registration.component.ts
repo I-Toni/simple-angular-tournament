@@ -18,6 +18,10 @@ export class RegistrationComponent implements OnInit {
     this.messages = '';
   }
   
+  trackByFn(index: any, item: any) {
+    return index;
+  }
+  
   registerContestants() {
     let roster = [];
     try {
