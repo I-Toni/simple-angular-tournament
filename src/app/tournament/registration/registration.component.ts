@@ -27,6 +27,13 @@ export class RegistrationComponent implements OnInit {
     this.players[1] = 'Kevin';
   }
   
+  autofillFourPlayers() {
+    this.players[0] = 'John';
+    this.players[1] = 'Stein';
+    this.players[2] = 'Saitama';
+    this.players[3] = 'Levi';
+  }
+  
   registerContestants() {
     let roster = [];
     try {
