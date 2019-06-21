@@ -40,6 +40,14 @@ export class BracketsComponent implements OnInit {
       return false;
     }
   }
+  
+  isThirdRound(): boolean {
+    if (this.roundNumber === 3) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   completeRound() {
     this.roundNumber += 1;

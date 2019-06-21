@@ -1,5 +1,4 @@
 <h1>Round: {{roundNumber}}</h1>
-{{players}}
 <div class="bracket" *ngIf="isFirstRound()" >
   <form (ngSubmit)="completeRound()">
     <fieldset>
@@ -43,3 +42,17 @@
     <button type="submit">Complete Round</button>
   </form>
 </div>
+
+<div class="bracket" *ngIf="isThirdRound()" >
+  <form (ngSubmit)="completeRound()">
+    <fieldset>
+      <h2>Match 1</h2>
+      <input type="radio" name="group1" [(ngModel)]= "roundWinners[0]" value={{players[0]}}> {{players[0]}}
+      <input type="radio" name="group1" [(ngModel)]= "roundWinners[0]" value={{players[1]}}>
+      {{players[1]}}
+    </fieldset>
+    <button type="submit">Complete Round</button>
+  </form>
+</div>
+
+<h3>{{winner}}</h3>
