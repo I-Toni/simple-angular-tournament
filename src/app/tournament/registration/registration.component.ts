@@ -59,5 +59,4 @@ export class RegistrationComponent implements OnInit {
       this.messages = "Error in register contestants: " + err;
     }
   }
-
 }
