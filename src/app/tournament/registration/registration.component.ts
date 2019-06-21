@@ -22,6 +22,11 @@ export class RegistrationComponent implements OnInit {
     return index;
   }
   
+  autofillTwoPlayers() {
+    this.players[0] = 'John';
+    this.players[1] = 'Kevin';
+  }
+  
   registerContestants() {
     let roster = [];
     try {
