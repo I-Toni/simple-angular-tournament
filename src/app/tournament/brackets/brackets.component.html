@@ -27,3 +27,19 @@
   </form>
 </div>
 
+<div class="bracket" *ngIf="isSecondRound()" >
+  <form (ngSubmit)="completeRound()">
+    <fieldset>
+      <h2>Match 1</h2>
+      <input type="radio" name="group1" [(ngModel)]= "roundWinners[0]" value={{players[0]}}> {{players[0]}}
+      <input type="radio" name="group1" [(ngModel)]= "roundWinners[0]" value={{players[1]}}>
+      {{players[1]}}
+    </fieldset>
+    <fieldset>
+      <h2>Match 2</h2>
+      <input type="radio" name="group2" [(ngModel)]= "roundWinners[1]" value={{players[2]}}>{{players[2]}}
+      <input type="radio" name="group2" [(ngModel)]= "roundWinners[1]" value={{players[3]}}>{{players[3]}}
+    </fieldset>
+    <button type="submit">Complete Round</button>
+  </form>
+</div>
