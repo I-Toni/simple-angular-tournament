@@ -34,6 +34,10 @@ export class RegistrationComponent implements OnInit {
     this.players[3] = 'Levi';
   }
   
+  autofillEightPlayers() {
+    this.players = ['Elrich','Sebastian','Hatake','Bruce','Derek','Raonic','Nadal','Messi'];
+  }
+  
   registerContestants() {
     let roster = [];
     try {
