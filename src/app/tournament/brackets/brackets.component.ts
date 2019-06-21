@@ -33,8 +33,12 @@ export class BracketsComponent implements OnInit {
     }
   }
   
-  setWinner(player) {
-    this.roundWinners.push(player);
+  isSecondRound(): boolean {
+    if (this.roundNumber === 2) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   completeRound() {
@@ -44,5 +48,6 @@ export class BracketsComponent implements OnInit {
     } else {
       this.winner = 'Winner is ' + this.roundWinners[0];
     }
+    this.roundWinners = [];
   }
 }
