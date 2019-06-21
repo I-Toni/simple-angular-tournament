@@ -37,9 +37,15 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
   });
   
-  it('should not register an duplicate players', () => {
+  it('should not register any duplicate players', () => {
     component.players = ['john', 'john', 'john', 'john'];
     component.registerContestants();
     expect(component.messages).toEqual('Error in register contestants: Error: Player must not be duplicate');
+  });
+  
+  it('should auto fill two players', () => {
+    component.autofillTwoPlayers();
+    expect(component.players[0]).toEqual('John');
+    expect(component.players[1]).toEqual('Kevin');
   });
 });
