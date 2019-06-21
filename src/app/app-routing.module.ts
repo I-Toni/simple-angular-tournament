@@ -6,6 +6,7 @@ import { BracketsComponent } from './tournament/brackets/brackets.component';
 
 const routes: Routes = [
   { path: '', component: HelloComponent},
+  { path: 'home', component: HelloComponent},
   { path: 'registration', component: RegistrationComponent},
   { path: 'brackets', component: BracketsComponent}
 ];

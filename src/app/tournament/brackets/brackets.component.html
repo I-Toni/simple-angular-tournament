@@ -1,10 +1,28 @@
 <h1>Round: {{roundNumber}}</h1>
-<div class="bracket" >
+{{players}}
+<div class="bracket" *ngIf="isFirstRound()" >
   <form (ngSubmit)="completeRound()">
-    <div *ngFor="let player of players; index as i; trackBy:trackByFn">
-      <input type="radio" name="playerName" [(ngModel)]= "player" value="player">player
-      <input type="radio" name="playerName" [(ngModel)]= "player" value="player">player
-    </div>
+    <fieldset>
+      <h2>Match 1</h2>
+      <input type="radio" name="group1" [(ngModel)]= "players[0]" [value]="players[0]"> {{players[0]}}
+      <input type="radio" name="group1" [(ngModel)]= "players[1]" [value]="players[1]">
+      {{players[1]}}
+    </fieldset>
+    <fieldset>
+      <h2>Match 2</h2>
+      <input type="radio" name="group2" [(ngModel)]= "players[2]" [value]="players[2]">{{players[2]}}
+      <input type="radio" name="group2" [(ngModel)]= "players[3]" [value]="players[3]">{{players[3]}}
+    </fieldset>
+    <fieldset>
+      <h2>Match 3</h2>
+      <input type="radio" name="group3" [(ngModel)]= "players[4]" [value]="players[4]">{{players[4]}}
+      <input type="radio" name="group3" [(ngModel)]= "players[5]" [value]="players[5]">{{players[5]}}
+    </fieldset>
+    <fieldset>
+      <h2>Match 4</h2>
+      <input type="radio" name="group4" [(ngModel)]= "players[6]" [value]="players[6]">{{players[6]}}
+      <input type="radio" name="group4" [(ngModel)]= "players[7]" [value]="players[7]">{{players[7]}}
+    </fieldset>
     <button type="submit">Complete Round</button>
   </form>
   <p>{{winner}}</p>

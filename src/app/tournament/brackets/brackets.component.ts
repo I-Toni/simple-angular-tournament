@@ -24,6 +24,14 @@ export class BracketsComponent implements OnInit {
   trackByFn(index: any, item: any) {
     return index;
   }
+  
+  isFirstRound(): boolean {
+    if (this.roundNumber === 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   completeRound() {
     this.roundNumber += 1;
