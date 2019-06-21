@@ -48,4 +48,17 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.players[0]).toEqual('John');
     expect(component.players[1]).toEqual('Kevin');
   });
+  
+  it('should insert four names in players', () => {
+    component.autofillFourPlayers();
+    expect(component.players[0]).toEqual('John');
+    expect(component.players[1]).toEqual('Stein');
+    expect(component.players[2]).toEqual('Saitama');
+    expect(component.players[3]).toEqual('Levi');
+  });
+  
+  it('should insert eight names in players', () => {
+    component.autofillEightPlayers();
+  expect(component.players).toEqual(['Elrich', 'Sebastian', 'Hatake', 'Bruce', 'Derek', 'Raonic', 'Nadal', 'Messi']);
+  });
 });
