@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+nav ul {
+  list-style-type: none; 
+}
 
+nav ul li {
+  text-decoration: none;
+  display: inline;
+}
+
+nav ul li a {
+  margin: 10px;
+}
