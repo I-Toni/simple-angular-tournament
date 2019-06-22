@@ -42,7 +42,7 @@ export class RegistrationComponent implements OnInit {
     let roster = [];
     try {
       for (var index = 0; index < this.players.length; index++) {
-        if (this.players[index] != '' || this.players[index] != null || this.players[index] != undefined) {
+        if (this.players[index] != '') {
           roster.push(this.players[index]);
         } 
       }
