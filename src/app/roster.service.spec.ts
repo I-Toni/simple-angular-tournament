@@ -41,4 +41,15 @@ describe('RosterService', () => {
     rosterService.addContestant('Dan');
     expect(rosterService.getContestants()).toEqual(['Kevin', 'John', 'Jake', 'Rocky', 'Dan']);
   });
+  
+  it('should remove contestants', () => {
+    const rosterService = new RosterService();
+    rosterService.addContestant('Kevin');
+    rosterService.addContestant('John');
+    rosterService.addContestant('Jake');
+    rosterService.addContestant('Rocky');
+    rosterService.addContestant('Dan');
+    rosterService.removeContestants();
+    expect(rosterService.getContestants()).toEqual([]);
+  });
 });
