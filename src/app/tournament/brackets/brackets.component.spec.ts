@@ -41,4 +41,9 @@ describe('BracketsComponent', () => {
     component.players = ['Garo', 'Genos', 'Roy', 'Nelson'];
     expect(component.isSecondRound()).toBeTruthy();
   });
+  
+  it('should set isSecondRound to false when players less than 4', () => {
+    component.players = ['Garo', 'Genos'];
+    expect(component.isSecondRound()).toBeFalsy();
+  });
 });
