@@ -56,4 +56,41 @@ describe('BracketsComponent', () => {
     component.players = ['Garo'];
     expect(component.isThirdRound()).toBeFalsy();
   });
+  
+  it('should set roundNumber to 1', () => {
+    component.players = ['Garo', 'Genos', 'Roy', 'Nelson', 'Luka', 'Modric', 'Kross', 'Baros'];
+    expect(component.roundNumber).toEqual(1);
+    component.completeRound();
+    expect(component.roundNumber).toEqual(2);
+    component.completeRound();
+    expect(component.roundNumber).toEqual(3);
+  });
+  
+  it('should set appropriate roundNumber when completeRound', () => {
+    component.players = ['Garo', 'Genos', 'Roy', 'Nelson', 'Luka', 'Modric', 'Kross', 'Baros'];
+    expect(component.roundNumber).toEqual(1);
+    component.completeRound();
+    expect(component.roundNumber).toEqual(2);
+    component.completeRound();
+    expect(component.roundNumber).toEqual(3);
+  });
+  
+  it('should set winner after completeRound', () => {
+    component.roundWinners = ['Garo'];
+    component.completeRound();
+    expect(component.winner).toEqual('Winner is Garo');
+  });
+  
+   it('should set roundWinners to empty after completeRound', () => {
+    component.roundWinners = ['Garo'];
+    component.completeRound();
+    expect(component.roundWinners).toEqual([]);
+  });
+  
+  it('should set same roundNumber when game over', () => {
+    component.roundWinners = ['Garo', ];
+    component.roundNumber = 2;
+    component.completeRound();
+    expect(component.roundNumber).toEqual(2);
+  });
 });
