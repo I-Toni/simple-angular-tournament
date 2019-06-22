@@ -26,7 +26,7 @@ export class BracketsComponent implements OnInit {
   }
   
   isFirstRound(): boolean {
-    if (this.roundNumber === 1) {
+    if (this.players.length === 8) {
       return true;
     } else {
       return false;
@@ -34,7 +34,7 @@ export class BracketsComponent implements OnInit {
   }
   
   isSecondRound(): boolean {
-    if (this.roundNumber === 2) {
+    if (this.players.length === 4) {
       return true;
     } else {
       return false;
@@ -42,7 +42,7 @@ export class BracketsComponent implements OnInit {
   }
   
   isThirdRound(): boolean {
-    if (this.roundNumber === 3) {
+    if (this.players.length === 2) {
       return true;
     } else {
       return false;
