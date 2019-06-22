@@ -36,4 +36,9 @@ describe('BracketsComponent', () => {
     component.players = ['Garo', 'Genos', 'Roy', 'Nelson'];
     expect(component.isFirstRound()).toBeFalsy();
   });
+  
+  it('should set isSecondRound to true when players equal 4', () => {
+    component.players = ['Garo', 'Genos', 'Roy', 'Nelson'];
+    expect(component.isSecondRound()).toBeTruthy();
+  });
 });
