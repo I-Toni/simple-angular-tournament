@@ -26,4 +26,9 @@ describe('BracketsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  it('should set first round to true', () => {
+    component.players = ['Garo', 'Genos', 'Roy', 'Nelson', 'Luka', 'Modric', 'Kross', 'Baros'];
+    expect(component.isFirstRound()).toBeTruthy();
+  });
 });
