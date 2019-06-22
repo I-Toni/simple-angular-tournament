@@ -51,4 +51,9 @@ describe('BracketsComponent', () => {
     component.players = ['Garo', 'Genos'];
     expect(component.isThirdRound()).toBeTruthy();
   });
+  
+  it('should set isThirdRound to false when players less than 2', () => {
+    component.players = ['Garo'];
+    expect(component.isThirdRound()).toBeFalsy();
+  });
 });
