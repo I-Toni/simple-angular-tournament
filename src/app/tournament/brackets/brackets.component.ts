@@ -21,10 +21,6 @@ export class BracketsComponent implements OnInit {
     this.winner = '';
   }
   
-  trackByFn(index: any, item: any) {
-    return index;
-  }
-  
   isFirstRound(): boolean {
     if (this.players.length === 8) {
       return true;
