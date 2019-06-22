@@ -27,8 +27,13 @@ describe('BracketsComponent', () => {
     expect(component).toBeTruthy();
   });
   
-  it('should set first round to true', () => {
+  it('should set isFirstRound to true when players equal 8', () => {
     component.players = ['Garo', 'Genos', 'Roy', 'Nelson', 'Luka', 'Modric', 'Kross', 'Baros'];
     expect(component.isFirstRound()).toBeTruthy();
+  });
+  
+  it('should set isFirstRound to false when players less than 8', () => {
+    component.players = ['Garo', 'Genos', 'Roy', 'Nelson'];
+    expect(component.isFirstRound()).toBeFalsy();
   });
 });
