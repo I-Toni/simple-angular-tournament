@@ -27,4 +27,8 @@ export class RosterService {
     };
     this.contestants.push(player);
   }
+  
+  removeContestants() {
+    this.contestants = [];
+  }
 }
