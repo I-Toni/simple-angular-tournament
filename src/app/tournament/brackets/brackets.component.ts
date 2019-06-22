@@ -55,6 +55,8 @@ export class BracketsComponent implements OnInit {
       this.players = this.roundWinners;
     } else {
       this.winner = 'Winner is ' + this.roundWinners[0];
+      this.players = [];
+      this.roundNumber -= 1;
     }
     this.roundWinners = [];
   }
