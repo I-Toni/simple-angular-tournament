@@ -56,7 +56,7 @@ export class RegistrationComponent implements OnInit {
         this.messages = 'Contestants should be 2, 4, or 8';
       }
     } catch (err){
-      this.messages = "Error in register contestants: " + err;
+      this.messages = "Register contestants: " + err;
     }
   }
 }

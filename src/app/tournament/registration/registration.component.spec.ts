@@ -40,7 +40,7 @@ describe('RegistrationComponent with Real Service', () => {
   it('should not register any duplicate players', () => {
     component.players = ['john', 'john', 'john', 'john'];
     component.registerContestants();
-    expect(component.messages).toEqual('Error in register contestants: Error: Player must not be duplicate');
+    expect(component.messages).toEqual('Register contestants: Error: Player must not be duplicate');
   });
   
   it('should auto fill two players', () => {
