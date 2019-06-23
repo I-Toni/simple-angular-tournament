@@ -1,22 +1,24 @@
-<h1>
-  Register Players
-</h1>
 <div>
-  {{ messages }}
-</div>
-<div class="contestants-container">
-  <form (ngSubmit)="registerContestants()">
-    <div class="contestant" *ngFor="let player of players; index as i; trackBy:trackByFn">
-      <input type="text" name="playerName{{i}}" [(ngModel)]="players[i]" placeholder="Contestant {{i}}"> <br/>
-    </div>
-    <div>
-      <button type="submit" >Register Contestants</button>
-    </div>
-  </form>
-</div>
+  <h1>
+    Register Players
+  </h1>
+  <div>
+    {{ messages }}
+  </div>
+  <div class="contestants-container">
+    <form (ngSubmit)="registerContestants()">
+      <div class="contestant" *ngFor="let player of players; index as i; trackBy:trackByFn">
+        <input type="text" name="playerName{{i}}" [(ngModel)]="players[i]" placeholder="Contestant {{i}}"> <br/>
+      </div>
+      <div>
+        <button type="submit" >Register Contestants</button>
+      </div>
+    </form>
+  </div>
 
-<div>
-  <button (click)="autofillTwoPlayers()">Autofill 2 Players</button>
-  <button (click)="autofillFourPlayers()">Autofill 4 Players</button>
-  <button (click)="autofillEightPlayers()">Autofill 8 Players</button>
-</div>       
+  <div>
+    <button (click)="autofillTwoPlayers()">Autofill 2 Players</button>
+    <button (click)="autofillFourPlayers()">Autofill 4 Players</button>
+    <button (click)="autofillEightPlayers()">Autofill 8 Players</button>
+  </div>   
+</div>    
