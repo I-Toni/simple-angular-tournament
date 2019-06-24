@@ -5,7 +5,7 @@ import { RegistrationComponent } from './tournament/registration/registration.co
 import { BracketsComponent } from './tournament/brackets/brackets.component';
 
 const routes: Routes = [
-  { path: '', component: HelloComponent},
+  { path: '', redirectTo: '/hello', pathMatch: 'full'},
   { path: 'hello', component: HelloComponent},
   { path: 'registration', component: RegistrationComponent},
   { path: 'brackets', component: BracketsComponent}
