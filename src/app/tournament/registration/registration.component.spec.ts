@@ -43,8 +43,14 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
   });
   
-  it('should not register an empty players', () => {
+  it('should not register an empty sring between three valid players', () => {
     component.players = ['John', '', 'Kevin', 'Rose'];
+    component.registerContestants();
+    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+  });
+  
+  it('should not register over 8 players', () => {
+    component.players = ['John', 'Ross', 'Kevin', 'Rose', 'Jake', 'Franklin', 'Ahmed', 'Milos', 'Near'];
     component.registerContestants();
     expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
   });
