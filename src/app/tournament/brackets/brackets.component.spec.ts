@@ -93,4 +93,10 @@ describe('BracketsComponent', () => {
     component.completeRound();
     expect(component.roundNumber).toEqual(2);
   });
+  
+   it('should set players to empty when game over', () => {
+    component.roundWinners = ['Garo', ];
+    component.completeRound();
+    expect(component.players).toEqual([]);
+  });
 });
