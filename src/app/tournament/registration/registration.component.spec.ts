@@ -37,6 +37,18 @@ describe('RegistrationComponent with Real Service', () => {
     expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
   });
   
+  it('should not register an empty players', () => {
+    component.players = ['', ''];
+    component.registerContestants();
+    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+  });
+  
+  it('should not register an empty players', () => {
+    component.players = ['John', '', 'Kevin', 'Rose'];
+    component.registerContestants();
+    expect(component.messages).toEqual('Contestants should be 2, 4, or 8');
+  });
+  
   it('should not register any duplicate players', () => {
     component.players = ['john', 'john', 'john', 'john'];
     component.registerContestants();
