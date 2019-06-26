@@ -79,4 +79,8 @@ describe('RegistrationComponent with Real Service', () => {
     component.autofillEightPlayers();
   expect(component.players).toEqual(['Elrich', 'Sebastian', 'Hatake', 'Bruce', 'Derek', 'Raonic', 'Nadal', 'Messi']);
   });
+  
+  it('should return 1 when 1 and John are parameters of trackByFn', () => {
+  expect(component.trackByFn(1, 'John')).toEqual(1);
+  });
 });
